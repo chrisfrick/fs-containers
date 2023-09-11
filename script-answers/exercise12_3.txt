@@ -1,0 +1,17 @@
+Script started on Mon Sep 11 12:21:40 2023
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+[?1034hchristopherfrick@~/Code/fs-containers$ docker ps -a
+CONTAINER ID   IMAGE         COMMAND    CREATED          STATUS                      PORTS     NAMES
+b16c91ce3e56   ubuntu        "bash"     9 minutes ago    Exited (0) 21 seconds ago             angry_roentgen
+0a8de088e64d   hello-world   "/hello"   18 minutes ago   Exited (0) 18 minutes ago             ecstatic_babbage
+christopherfrick@~/Code/fs-containers$ docker start -i angry_roentgen
+[?2004h]0;root@b16c91ce3e56: /root@b16c91ce3e56:/# nano /usr/src/as pp/index.js 
+[?2004l[?2004h[?1049h[22;0;0t[1;17r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[15;37H(B[0;7m[ Reading... ](B[m[15;36H(B[0;7m[ Read 0 lines ](B[m[H(B[0;7m  GNU nano 6.2 [20b/usr/src/app/index.js [29b [1;86H(B[m[16d(B[0;7m^G(B[m Help[15G(B[0;7m^O(B[m Write Out  (B[0;7m^W(B[m Where Is   (B[0;7m^K(B[m Cut[16;57H(B[0;7m^T(B[m Execute    (B[0;7m^C(B[m Location[17d(B[0;7m^X(B[m Exit[15G(B[0;7m^R(B[m Read File  (B[0;7m^\(B[m Replace    (B[0;7m^U(B[m Paste[57G(B[0;7m^J(B[m Justify    (B[0;7m^/(B[m Go To Line[2d[?12l[?25h[?25l[1;58H(B[0;7m*[86G(B[m[?12l[?25h[2dc[?25l[?12l[?25ho[?25l[?12l[?25hn[?25l[?12l[?25hs[?25l[?12l[?25ho[?25l[?12l[?25hl[?25l[?12l[?25he[?25l[?12l[?25h.[?25l[?12l[?25hl[?25l[?12l[?25ho[?25l[?12l[?25hg[?25l[?12l[?25h([?25l[?12l[?25h'[?25l[?12l[?25hH[?25l[?12l[?25he[?25l[?12l[?25hl[?25l[?12l[?25hl[?25l[?12l[?25ho[?25l[?12l[?25h[42m [49m(B[m[?25l[15d[K[?12l[?25h[2;19H W[?25l[?12l[?25ho[?25l[?12l[?25hr[?25l[?12l[?25hl[?25l[?12l[?25hd[?25l[?12l[?25h[2;13H(B[0;1m[35m'Hello World'[39m(B[m[?25l[?12l[?25h)[?25l[16;15H [6b(B[0;7mM-D(B[m DOS Format [6b(B[0;7mM-A(B[m Append [10b(B[0;7mM-B(B[m Backup File[K[17;2H(B[0;7mC(B[m Cancel [11b(B[0;7mM-M(B[m Mac Format [6b(B[0;7mM-P(B[m Prepend [9b(B[0;7m^T(B[m Browse[K[15d(B[0;7mFile Name to Write: /usr/src/app/index.js [44b [15;42H(B[m[?12l[?25h[?25l[36G[1K (B[0;7m[ Writing... ](B[m[K[1;58H(B[0;7m [86G(B[m[15;36H(B[0;7m[ Wrote 1 line ](B[m[16;15H(B[0;7m^O(B[m Write Out  (B[0;7m^W(B[m Where Is   (B[0;7m^K(B[m Cut [7b(B[0;7m^T(B[m Execute    (B[0;7m^C(B[m Location[17;2H(B[0;7mX(B[m Exit [6b(B[0;7m^R(B[m Read File  (B[0;7m^\(B[m Replace    (B[0;7m^U(B[m Paste      (B[0;7m^J(B[m Justify    (B[0;7m^/(B[m Go To Line[?12l[?25h[2;27H[?25l[15d[J[17d[?12l[?25h[17;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;root@b16c91ce3e56: /root@b16c91ce3e56:/# [Kexit
+[?2004lexit
+christopherfrick@~/Code/fs-containers$ exit
+exit
+
+Script done on Mon Sep 11 12:23:07 2023
