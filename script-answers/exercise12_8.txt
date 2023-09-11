@@ -1,0 +1,123 @@
+Script started on Mon Sep 11 16:20:12 2023
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+[?1034hchristopherfrick@~/Code/fs-containers/todo-app/todo-backend$ docker compose -f docker-compose.dev.yml up  -d
+[1A[1B[0G[?25l[+] Running 1/0
+ [32m✔[0m Container todo-backend-mongo-1  [32mCreated[0m                                                          [34m0.0s [0m
+[?25h[1A[1A[0G[?25l[34m[+] Running 1/1[0m
+ [32m✔[0m Container todo-backend-mongo-1  [32mCreated[0m                                                          [34m0.0s [0m
+[?25h[1A[1A[0G[?25l[34m[+] Running 1/1[0m
+ [32m✔[0m Container todo-backend-mongo-1  [32mCreated[0m                                                          [34m0.0s [0m
+[?25h[1A[1A[0G[?25l[34m[+] Running 1/1[0m
+ [32m✔[0m Container todo-backend-mongo-1  [32mCreated[0m                                                          [34m0.0s [0m
+[?25h[1A[1A[0G[?25l[34m[+] Running 1/1[0m
+ [32m✔[0m Container todo-backend-mongo-1  [32mCreated[0m                                                          [34m0.0s [0m
+[?25h[1A[1A[0G[?25l[34m[+] Running 1/1[0m
+ [32m✔[0m Container todo-backend-mongo-1  [32mStarted[0m                                                          [34m0.0s [0m
+[?25hchristopherfrick@~/Code/fs-containers/todo-app/todo-backend$ docker container ls
+CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS         PORTS                     NAMES
+fe524188c0c5   mongo     "docker-entrypoint.s…"   49 minutes ago   Up 5 seconds   0.0.0.0:3456->27017/tcp   todo-backend-mongo-1
+christopherfrick@~/Code/fs-containers/todo-app/todo-backend$ docker exec -it todo-backend-mongo-1 bash
+[?2004hroot@fe524188c0c5:/# mongosh
+[?2004l]0;mongosh mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000Current Mongosh Log ID:	64ff76c41b41a94e8348a6dd
+Connecting to:		[1m[32mmongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.10.6[0m
+Using MongoDB:		7.0.1
+[1m[33mUsing Mongosh[0m:		1.10.6
+
+For mongosh info see: [1mhttps://docs.mongodb.com/mongodb-shell/[0m
+
+[1G[0J [1G[1G[0Jtest> [7Gshow dbs
+Uncaught [1m[31mMongoServerError[0m: Command listDatabases requires authentication
+[1G[0Jtest> [7Gexit
+[?2004hroot@fe524188c0c5:/# mongosh -u root -p example
+[?2004l]0;mongosh mongodb://<credentials>@127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000Current Mongosh Log ID:	64ff76df5fe035804d35d2d3
+Connecting to:		[1m[32mmongodb://<credentials>@127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.10.6[0m
+Using MongoDB:		7.0.1
+[1m[33mUsing Mongosh[0m:		1.10.6
+
+For mongosh info see: [1mhttps://docs.mongodb.com/mongodb-shell/[0m
+
+[1G[0J [1G[1m[33m------[0m
+   [1m[33mThe server generated these startup warnings when booting[0m
+   2023-09-11T20:20:55.859+00:00: vm.max_map_count is too low
+[1m[33m------[0m
+
+[1G[0Jtest> [7Gshow dbs
+[1madmin[0m         100.00 KiB
+[1mconfig[0m        108.00 KiB
+[1mlocal[0m          72.00 KiB
+[1mthe_database[0m   72.00 KiB
+[1G[0Jtest> [7Guse the_database
+switched to db the_database
+[1G[0Jthe_database> [15Gshow collections
+[1mtodos[0m
+[1G[0Jthe_database> [15Gdb.tot[1G[0Jthe_database> db.to[20Gdos.find({})
+[
+  {
+    _id: ObjectId("64ff6b13a6e61722c8ccd283"),
+    text: [32m'Write code'[39m,
+    done: [33mtrue[39m
+  },
+  {
+    _id: ObjectId("64ff6b13a6e61722c8ccd284"),
+    text: [32m'Learn about containers'[39m,
+    done: [33mfalse[39m
+  },
+  {
+    _id: ObjectId("64ff6de8b39b0ae18e7bf59f"),
+    text: [32m'Test with Postman'[39m,
+    done: [33mtrue[39m,
+    __v: [33m0[39m
+  }
+]
+[1G[0Jthe_database> [15Gdb.todos.insertOne({[1G[0Jthe_database> db.todos.insertOne([34G { text[33mtext[39m: [32m"[39m[32mI[39m[32mn[39m[32mc[39m[32mr[39m[32me[39m[32ma[39m[32ms[39m[32me[39m [32mt[39m[32mh[39m[32me[39m [32mn[39m[32mu[39m[32mm[39m[32mb[39m[32me[39m[32mr[39m [32mo[39m[32mf[39m [32mt[39m[32mo[39m[32mo[39m[32ml[39m[32ms[39m [32mi[39m[32mn[39m [32mm[39m[32my[39m [32mt[39m[32mo[39m[32mo[39m[32ml[39m[32mb[39m[32me[39m[32ml[39m[32mt[39m[32m"[39m, d[36mdo[39mdone: fals[33mfalse[39m } )
+{
+  acknowledged: [33mtrue[39m,
+  insertedId: ObjectId("64ff77805fe035804d35d2d4")
+}
+[1G[0Jthe_database> [15Gdb.todos.find({})
+[
+  {
+    _id: ObjectId("64ff6b13a6e61722c8ccd283"),
+    text: [32m'Write code'[39m,
+    done: [33mtrue[39m
+  },
+  {
+    _id: ObjectId("64ff6b13a6e61722c8ccd284"),
+    text: [32m'Learn about containers'[39m,
+    done: [33mfalse[39m
+  },
+  {
+    _id: ObjectId("64ff6de8b39b0ae18e7bf59f"),
+    text: [32m'Test with Postman'[39m,
+    done: [33mtrue[39m,
+    __v: [33m0[39m
+  },
+  {
+    _id: ObjectId("64ff77805fe035804d35d2d4"),
+    text: [32m'Increase the number of tools in my toolbelt'[39m,
+    done: [33mfalse[39m
+  }
+]
+[1G[0Jthe_database> [15Gexit
+[?2004hroot@fe524188c0c5:/# exit
+[?2004lexit
+christopherfrick@~/Code/fs-containers/todo-app/todo-backend$ docker compose down
+[1A[1B[0G[?25l[+] Running 1/0
+ [33m[1m![0m Network todo-backend_default  [33m[1mResource is still in use[0m                                           [34m0.0s [0m
+[?25hchristopherfrick@~/Code/fs-containers/todo-app/todo-backend$ docker compo[K[K[K[K[Kcontainer ls
+CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS         PORTS                     NAMES
+fe524188c0c5   mongo     "docker-entrypoint.s…"   54 minutes ago   Up 4 minutes   0.0.0.0:3456->27017/tcp   todo-backend-mongo-1
+christopherfrick@~/Code/fs-containers/todo-app/todo-backend$ docker container lsmpose down
+[1A[1B[0G[?25l[+] Running 1/0
+ [33m[1m![0m Network todo-backend_default  [33m[1mResource is still in use[0m                                           [34m0.0s [0m
+[?25hchristopherfrick@~/Code/fs-containers/todo-app/todo-backend$ docker container stop todo-backend-mongo-1
+todo-backend-mongo-1
+christopherfrick@~/Code/fs-containers/todo-app/todo-backend$ docker container ls
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+christopherfrick@~/Code/fs-containers/todo-app/todo-backend$ exit
+exit
+
+Script done on Mon Sep 11 16:26:50 2023
