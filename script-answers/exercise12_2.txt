@@ -1,0 +1,24 @@
+Script started on Mon Sep 11 12:11:22 2023
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+[?1034hchristopherfrick@~/Code/fs-containers$ docker container run -it ut[Kbuntu bash
+Unable to find image 'ubuntu:latest' locally
+latest: Pulling from library/ubuntu
+
+[1A[2K445a6a12be2b: Pulling fs layer [1B[1A[2K445a6a12be2b: Downloading  311.3kB/29.54MB[1B[1A[2K445a6a12be2b: Downloading  933.9kB/29.54MB[1B[1A[2K445a6a12be2b: Downloading  1.547MB/29.54MB[1B[1A[2K445a6a12be2b: Downloading  2.149MB/29.54MB[1B[1A[2K445a6a12be2b: Downloading  2.767MB/29.54MB[1B[1A[2K445a6a12be2b: Downloading   3.39MB/29.54MB[1B[1A[2K445a6a12be2b: Downloading  4.012MB/29.54MB[1B[1A[2K445a6a12be2b: Downloading  4.946MB/29.54MB[1B[1A[2K445a6a12be2b: Downloading  5.569MB/29.54MB[1B[1A[2K445a6a12be2b: Downloading  6.187MB/29.54MB[1B[1A[2K445a6a12be2b: Downloading  7.117MB/29.54MB[1B[1A[2K445a6a12be2b: Downloading  8.051MB/29.54MB[1B[1A[2K445a6a12be2b: Downloading  8.985MB/29.54MB[1B[1A[2K445a6a12be2b: Downloading  9.296MB/29.54MB[1B[1A[2K445a6a12be2b: Downloading  9.911MB/29.54MB[1B[1A[2K445a6a12be2b: Downloading  10.84MB/29.54MB[1B[1A[2K445a6a12be2b: Downloading  11.77MB/29.54MB[1B[1A[2K445a6a12be2b: Downloading   12.7MB/29.54MB[1B[1A[2K445a6a12be2b: Downloading  13.63MB/29.54MB[1B[1A[2K445a6a12be2b: Downloading  14.56MB/29.54MB[1B[1A[2K445a6a12be2b: Downloading   15.5MB/29.54MB[1B[1A[2K445a6a12be2b: Downloading  16.43MB/29.54MB[1B[1A[2K445a6a12be2b: Downloading  17.67MB/29.54MB[1B[1A[2K445a6a12be2b: Downloading   18.9MB/29.54MB[1B[1A[2K445a6a12be2b: Downloading  20.44MB/29.54MB[1B[1A[2K445a6a12be2b: Downloading  21.68MB/29.54MB[1B[1A[2K445a6a12be2b: Downloading  23.23MB/29.54MB[1B[1A[2K445a6a12be2b: Downloading  24.48MB/29.54MB[1B[1A[2K445a6a12be2b: Downloading  26.34MB/29.54MB[1B[1A[2K445a6a12be2b: Downloading   28.5MB/29.54MB[1B[1A[2K445a6a12be2b: Verifying Checksum [1B[1A[2K445a6a12be2b: Download complete [1B[1A[2K445a6a12be2b: Extracting  327.7kB/29.54MB[1B[1A[2K445a6a12be2b: Extracting  1.966MB/29.54MB[1B[1A[2K445a6a12be2b: Extracting  3.604MB/29.54MB[1B[1A[2K445a6a12be2b: Extracting  5.571MB/29.54MB[1B[1A[2K445a6a12be2b: Extracting  6.554MB/29.54MB[1B[1A[2K445a6a12be2b: Extracting  7.537MB/29.54MB[1B[1A[2K445a6a12be2b: Extracting  8.192MB/29.54MB[1B[1A[2K445a6a12be2b: Extracting  8.847MB/29.54MB[1B[1A[2K445a6a12be2b: Extracting  10.16MB/29.54MB[1B[1A[2K445a6a12be2b: Extracting  12.45MB/29.54MB[1B[1A[2K445a6a12be2b: Extracting  15.07MB/29.54MB[1B[1A[2K445a6a12be2b: Extracting  17.04MB/29.54MB[1B[1A[2K445a6a12be2b: Extracting  19.33MB/29.54MB[1B[1A[2K445a6a12be2b: Extracting  20.97MB/29.54MB[1B[1A[2K445a6a12be2b: Extracting  22.61MB/29.54MB[1B[1A[2K445a6a12be2b: Extracting   24.9MB/29.54MB[1B[1A[2K445a6a12be2b: Extracting  25.56MB/29.54MB[1B[1A[2K445a6a12be2b: Extracting  25.89MB/29.54MB[1B[1A[2K445a6a12be2b: Extracting   27.2MB/29.54MB[1B[1A[2K445a6a12be2b: Extracting  28.18MB/29.54MB[1B[1A[2K445a6a12be2b: Extracting  28.51MB/29.54MB[1B[1A[2K445a6a12be2b: Extracting  29.16MB/29.54MB[1B[1A[2K445a6a12be2b: Extracting  29.49MB/29.54MB[1B[1A[2K445a6a12be2b: Extracting  29.54MB/29.54MB[1B[1A[2K445a6a12be2b: Pull complete [1BDigest: sha256:aabed3296a3d45cede1dc866a24476c4d7e093aa806263c27ddaadbdce3c1054
+Status: Downloaded newer image for ubuntu:latest
+[?2004h]0;root@b16c91ce3e56: /root@b16c91ce3e56:/# ls
+[?2004l[0m[01;36mbin[0m   [01;34mdev[0m  [01;34mhome[0m  [01;36mlib32[0m  [01;36mlibx32[0m  [01;34mmnt[0m  [01;34mproc[0m  [01;34mrun[0m   [01;34msrv[0m  [30;42mtmp[0m  [01;34mvar[0m
+[01;34mboot[0m  [01;34metc[0m  [01;36mlib[0m   [01;36mlib64[0m  [01;34mmedia[0m   [01;34mopt[0m  [01;34mroot[0m  [01;36msbin[0m  [01;34msys[0m  [01;34musr[0m
+[?2004h]0;root@b16c91ce3e56: /root@b16c91ce3e56:/# mkdir usr/src/app
+[?2004l[?2004h]0;root@b16c91ce3e56: /root@b16c91ce3e56:/# ls usr/
+[?2004l[0m[01;34mbin[0m  [01;34mgames[0m  [01;34minclude[0m  [01;34mlib[0m  [01;34mlib32[0m  [01;34mlib64[0m  [01;34mlibexec[0m  [01;34mlibx32[0m  [01;34mlocal[0m  [01;34msbin[0m  [01;34mshare[0m  [01;34msrc[0m
+[?2004h]0;root@b16c91ce3e56: /root@b16c91ce3e56:/# touch usr/src/app/index.js
+[?2004l[?2004h]0;root@b16c91ce3e56: /root@b16c91ce3e56:/# [Kexit
+[?2004lexit
+christopherfrick@~/Code/fs-containers$ exit
+exit
+
+Script done on Mon Sep 11 12:13:13 2023
