@@ -8,6 +8,8 @@ const statisticsRouter = require('./routes/statistics');
 
 const app = express();
 
+console.log(process.env)
+
 app.use(cors());
 
 app.use(logger('dev'));
